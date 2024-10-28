@@ -1,0 +1,38 @@
+CREATE TABLE movies (
+    id SERIAL PRIMARY KEY,
+    movie_name VARCHAR(300) UNIQUE,
+    year INT NOT NULL,
+    rating DECIMAL(2, 1) NOT NULL
+);
+
+INSERT INTO movies (movie_name, year, rating) VALUES
+    ('Donnie Darko', 2001, 8.0),
+    ('Interstellar', 2014, 8.6),
+    ('Back to the Future', 1985, 8.5),
+    ('The Butterfly Effect', 2004, 7.6),
+    ('Inception', 2010, 8.8),
+    ('The Matrix', 1999, 8.7),
+    ('Eternal Sunshine of the Spotless Mind', 2004, 8.3),
+    ('Memento', 2000, 8.4),
+    ('Fight Club', 1999, 8.8),
+    ('The Truman Show', 1998, 8.1),
+    ('Predestination', 2014, 7.5),
+    ('Edge of Tomorrow', 2014, 7.9),
+    ('Looper', 2012, 7.4),
+    ('The Sixth Sense', 1999, 8.1),
+    ('Twelve Monkeys', 1995, 8.0),
+    ('The Prestige', 2006, 8.5),
+    ('Arrival', 2016, 7.9),
+    ('Source Code', 2011, 7.5),
+    ('Dark City', 1998, 7.6),
+    ('Minority Report', 2002, 7.6),
+    ('The Time Machine', 2002, 6.0),
+    ('Cloud Atlas', 2012, 7.4),
+    ('Solaris', 2002, 6.2),
+    ('Moon', 2009, 7.9),
+    ('Dune', 2021, 8.0),
+    ('Blade Runner', 1982, 8.1),
+    ('Gattaca', 1997, 7.8),
+    ('Her', 2013, 8.0),
+    ('Under the Skin', 2013, 6.3),
+    ('Coherence', 2013, 7.2);
