@@ -12,8 +12,8 @@ const roboto = Roboto({
   variable: "--font-roboto",
 });
 export const metadata: Metadata = {
-  title: "...",
-  description: "...",
+  title: "MovieList",
+  description: "MovieList",
 };
 
 export default function RootLayout(props: { children: React.ReactNode }) {

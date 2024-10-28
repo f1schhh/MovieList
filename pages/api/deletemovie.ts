@@ -18,6 +18,6 @@ export default async function handler(
       console.log(err);
     }
   } else {
-    res.status(500).json({ message: "Something went wrong" });
+    res.status(405).json({ message: "Something went wrong" });
   }
 }

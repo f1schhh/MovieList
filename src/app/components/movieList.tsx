@@ -10,7 +10,7 @@ export interface MovieOption {
 }
 export type MovieDataProps = {
   movieData: Array<MovieOption>;
-  onAction: (message?: string, error?: boolean) => Promise<void>;
+  onAction: (message?: string, error?: boolean) => void;
   message?: string;
 };
 

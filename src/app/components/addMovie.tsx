@@ -18,8 +18,10 @@ export default function AddMovie({ movieData, onAction }: MovieDataProps) {
   const [movieStatus, setMovieStatus] = useState<boolean>(false);
   const checkIfMovieExists = (movieName: string) => {
     setMovieStatus(
-      movieData?.some((movie: MovieOption) => movie.movie_name === movieName) ??
-        false
+      movieData?.some(
+        (movie: MovieOption) =>
+          movie.movie_name.toLowerCase() === movieName.toLowerCase()
+      ) ?? false
     );
   };
   const addMovie = async (formData: MovieOption) => {
@@ -39,7 +41,9 @@ export default function AddMovie({ movieData, onAction }: MovieDataProps) {
         return;
       }
       const results: MovieDataProps = await response.json();
-      onAction(results.message);
+      if (response.ok) {
+        onAction(results.message);
+      }
     } catch (error) {
       console.error(error);
     }
